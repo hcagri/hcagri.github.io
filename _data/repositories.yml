@@ -1,12 +1,10 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - hcagri
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - hcagri/DC-VAE
+  - hcagri/T-GNN
+  - hcagri/light-gcn
+  - hcagri/guided-super-resolution
+  - hcagri/Inverse-Autoregressive-Flow
+  - hcagri/Museum-Audio-Guide
