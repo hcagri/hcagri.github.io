@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://hcagri.github.io/about/sitemap.xml
+Sitemap: https://hcagri.github.io//sitemap.xml
