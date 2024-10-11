@@ -14,7 +14,9 @@ latest_posts: False # includes a list of the newest posts
 selected_papers: False # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-I am a PhD candidate at [Delft University of Technology](https://www.tudelft.nl/en/) in the Data-Intensive Systems (DIS) group, working with [Dr. Kubilay Atasu](https://atasu-kubilay.github.io). My research focuses on graph machine learning and deep learning. I previously obtained my BS and MS degrees from [METU](https://eee.metu.edu.tr), where I was supervised by [Aydın Alatan](https://eee.metu.edu.tr/personel/aydin-alatan).
+PhD candidate at [Delft University of Technology](https://www.tudelft.nl/en/) in the Data-Intensive Systems (DIS) group, working with [Dr. Kubilay Atasu](https://atasu-kubilay.github.io). My research focuses on graph machine learning and deep learning. 
+
+I previously obtained my BS and MS degrees from [METU](https://eee.metu.edu.tr), where I was supervised by [Aydın Alatan](https://eee.metu.edu.tr/personel/aydin-alatan).
 
 
 <style>
