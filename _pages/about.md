@@ -14,8 +14,8 @@ latest_posts: False # includes a list of the newest posts
 selected_papers: False # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
+I am a PhD candidate at [Delft University of Technology](https://www.tudelft.nl/en/) in the Data-Intensive Systems (DIS) group, working with [Dr. Kubilay Atasu](https://atasu-kubilay.github.io). My research focuses on graph machine learning and deep learning. I previously obtained my BS and MS degrees from [METU](https://eee.metu.edu.tr), where I was supervised by [Aydın Alatan](https://eee.metu.edu.tr/personel/aydin-alatan).
 
-I am a Graduate Researcher/Software Engineer at the [METU Center for Image Analysis](https://ogam.metu.edu.tr). Additionally, I am working as a Research Assistant and pursuing my Master's studies at [METU](https://eee.metu.edu.tr), under the supervision of [Aydın Alatan](https://eee.metu.edu.tr/personel/aydin-alatan). My research is primarily focused on solving the multiple object tracking problem. To tackle this challenge effectively, I am developing a method that utilizes graph neural networks. I am particularly interested in the research of graph machine learning. Additionally, I have a background in signal processing, which was my major during my Bachelor's studies.
 
 <style>
   .list-container {
@@ -49,24 +49,13 @@ I am a Graduate Researcher/Software Engineer at the [METU Center for Image Analy
   <div>
     <h2 class="list-title">Interests</h2>
     <ul style="padding-left:20px">
-      <li>Visual Tracking</li>
-      <li>Trajectory Prediction</li>
+      <li>Expressivity of GNNs for multigraphs</li>
+      <li>Temporal GNNs</li>
       <li>Link Prediction</li>
-      <li>Graph Representation Learning</li>
+      <li>Financial Transaction Networks</li>
     </ul>
   </div>
 
-  <div>
-    <h2 class="list-title">Education</h2>
-    <ul class="list-2">
-    <li style="font-size:12px" class="fa">&#xf19d;   
-     </li> <b>MSc in Electrical-Electronics Eng.,2023 </b> 
-     <span class="subtext">Middle East Technical University</span>
-    <li style="font-size:12px" class="fa">&#xf19d;   
-     </li> <b>BSc in Electrical-Electronics Eng.,2021 </b> 
-     <span class="subtext">Middle East Technical University</span>
-    </ul>
-  </div>
 
 </div>
 
