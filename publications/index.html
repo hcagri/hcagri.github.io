@@ -79,11 +79,11 @@
               
 
               <!-- Other pages -->
-              <li class="nav-item ">
-                <a class="nav-link" href="/cv/">cv</a>
-              </li>
               <li class="nav-item active">
                 <a class="nav-link" href="/publications/">publications<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/cv/">cv</a>
               </li>
 
               <!-- Toogle theme mode -->
@@ -119,11 +119,141 @@
           </header>
 
           <article>
-            <h3 id="2024">2024</h3>
-<ul>
-  <li>
-<strong>H. Ç. Bilgi</strong> and A. A. Alatan, “Bi-Directional Tracklet Embedding for Multi-Object Tracking,” 2024 IEEE International Conference on Image Processing (<strong>ICIP 2024</strong>)</li>
-</ul>
+            <!-- 
+_bibliography/papers.bib
+
+@article{RN7745,
+   abbr={ICIP},
+   author={Bilgi, H. Çağrι and Alatan, A. Aydιn},
+   title={Bi-Directional Tracklet Embedding for Multi-Object Tracking}, 
+   journal = {IEEE International Conference on Image Processing},
+   ISSN = {0019-1019 1474-919X},
+   DOI = {10.1111/ibi.13069},
+   year = {2022},
+   abstract={The last decade has seen significant advancements in multi-object tracking, particularly with the emergence of deep learning based methods. However, many prior studies in online tracking have primarily focused on enhancing track management or extracting visual features, often leading to hybrid approaches with limited effectiveness, especially in scenarios with severe occlusions. Conversely, in offline tracking, there has been a lack of emphasis on robust motion cues. In response, this approach aims to present a novel solution for offline tracking by merging tracklets using some recent promising learning-based architectures. We leverage a jointly performing Transformer and Graph Neural Network (GNN) encoder to integrate both the individual motions of targets and their interactions in between. By enabling bi-directional information propagation between the Transformer and the GNN, proposed model allows motion modeling to depend on interactions, and conversely, interaction modeling to depend on the motion of each target. The proposed solution is an end-to-end trainable model that eliminates the requirement for any handcrafted short-term or long-term matching processes. This approach performs on par with state-of-the-art multi-object tracking algorithms, demonstrating its effectiveness and robustness.},
+   bibtex_show={true},
+   html={https://ieeexplore.ieee.org/document/10648019},
+   pdf={https://ieeexplore.ieee.org/document/10648019},
+   # preview={bulla2022_prev.png},
+   type = {Journal Article},
+} -->
+
+<!-- _pages/publications.md -->
+<div class="publications">
+  <h2 class="year">2024</h2>
+  <ol class="bibliography">
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr"><abbr class="badge">arXiv</abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="RN7795" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Multigraph Message Passing with Bi-Directional Multi-Edge Aggregations</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        H. Çağrı Bilgi, Lydia Y. Chen, and Kubilay Atasu</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>arXiv</em>, 2024
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+          </div>
+          
+          <div class="badges">
+            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
+              <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Graph Neural Networks (GNNs) have seen significant advances in recent years, yet their application to multigraphs, where parallel edges exist between the same pair of nodes, remains under-explored. Standard GNNs, designed for simple graphs, compute node representations by combining all connected edges at once, without distinguishing between edges from different neighbors. There are some GNN architectures proposed specifically for multigraph tasks, yet these architectures perform only node-level aggregation in their message-passing layers, which limits their expressive power. Furthermore, these approaches either lack permutation equivariance when a strict total edge ordering is absent, or fail to preserve the topological structure of the multigraph. To address all these shortcomings, we propose MEGA-GNN, a unified framework for message passing on multigraphs that can effectively perform diverse graph learning tasks. Our approach introduces a two-stage aggregation process in the message passing layers: first, parallel edges are aggregated, followed by a node-level aggregation that operates on aggregated messages from distinct neighbors. We show that MEGA-GNN supports permutation equivariance and invariance properties. We also show that MEGA-GNN is universal given a strict total order on the edges. Experiments on synthetic and real-world financial transaction datasets demonstrate that MEGA-GNN either significantly outperforms or is on par with the accuracy of state-of-the-art solutions.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">RN7795</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Bilgi, H. Çağrı and Chen, Lydia Y. and Atasu, Kubilay}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Multigraph Message Passing with Bi-Directional Multi-Edge Aggregations}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{arXiv}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr"><abbr class="badge">ICIP</abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="RN7745" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Bi-Directional Tracklet Embedding for Multi-Object Tracking</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        H. Çağrι Bilgi, and A. Aydιn Alatan</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          2024
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="https://ieeexplore.ieee.org/document/10648019" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
+            <a href="https://ieeexplore.ieee.org/document/10648019" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
+          </div>
+          
+          <div class="badges">
+            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-doi="10.1109/ICIP51287.2024.10648019"></span>
+              <span class="__dimensions_badge_embed__" data-doi="10.1109/ICIP51287.2024.10648019" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>The last decade has seen significant advancements in multi-object tracking, particularly with the emergence of deep learning based methods. However, many prior studies in online tracking have primarily focused on enhancing track management or extracting visual features, often leading to hybrid approaches with limited effectiveness, especially in scenarios with severe occlusions. Conversely, in offline tracking, there has been a lack of emphasis on robust motion cues. In response, this approach aims to present a novel solution for offline tracking by merging tracklets using some recent promising learning-based architectures. We leverage a jointly performing Transformer and Graph Neural Network (GNN) encoder to integrate both the individual motions of targets and their interactions in between. By enabling bi-directional information propagation between the Transformer and the GNN, proposed model allows motion modeling to depend on interactions, and conversely, interaction modeling to depend on the motion of each target. The proposed solution is an end-to-end trainable model that eliminates the requirement for any handcrafted short-term or long-term matching processes. This approach performs on par with state-of-the-art multi-object tracking algorithms, demonstrating its effectiveness and robustness.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">RN7745</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Bilgi, H. Çağrι and Alatan, A. Aydιn}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Bi-Directional Tracklet Embedding for Multi-Object Tracking}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{IEEE International Conference on Image Processing}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1109/ICIP51287.2024.10648019}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+  <span class="na">type</span> <span class="p">=</span> <span class="s">{Conference Article}</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+</ol>
+
+
+</div>
 
           </article>
 
