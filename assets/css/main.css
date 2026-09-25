@@ -7,11 +7,11 @@
  ******************************************************************************/
 :root {
   --global-bg-color: #ffffff;
-  --global-code-bg-color: rgba(181, 9, 172, 0.05);
+  --global-code-bg-color: rgba(13, 148, 136, 0.05);
   --global-text-color: #000000;
   --global-text-color-light: #828282;
-  --global-theme-color: #B509AC;
-  --global-hover-color: #B509AC;
+  --global-theme-color: #0D9488;
+  --global-hover-color: #14B8A6;
   --global-hover-text-color: #ffffff;
   --global-footer-bg-color: #1C1C1D;
   --global-footer-text-color: #e8e8e8;
@@ -52,8 +52,8 @@ html[data-theme=dark] {
   --global-code-bg-color: #2c3237;
   --global-text-color: #e8e8e8;
   --global-text-color-light: #e8e8e8;
-  --global-theme-color: #2698BA;
-  --global-hover-color: #2698BA;
+  --global-theme-color: #5EEAD4;
+  --global-hover-color: #14B8A6;
   --global-hover-text-color: #ffffff;
   --global-footer-bg-color: #e8e8e8;
   --global-footer-text-color: #1C1C1D;
@@ -110,11 +110,19 @@ body.sticky-bottom-footer {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1100px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .profile img {
   width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.profile img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(13, 148, 136, 0.2);
 }
 
 /******************************************************************************
@@ -126,6 +134,16 @@ body.sticky-bottom-footer {
 /*******************************************************************************
  * Styles for the base elements of the theme.
  ******************************************************************************/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
 p,
 h1,
 h2,
@@ -139,6 +157,30 @@ li,
 span,
 strong {
   color: var(--global-text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1.25em;
+  line-height: 1.7;
 }
 
 hr {
@@ -156,10 +198,11 @@ table th {
 a,
 table.table a {
   color: var(--global-theme-color);
+  transition: all 0.3s ease;
 }
 a:hover,
 table.table a:hover {
-  color: var(--global-theme-color);
+  color: var(--global-hover-color);
   text-decoration: underline;
 }
 a:hover:after :not(.nav-item.dropdown),
@@ -198,6 +241,12 @@ blockquote {
 
 .card {
   background-color: var(--global-card-bg-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--global-divider-color);
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 .card img {
   width: 100%;
@@ -261,10 +310,12 @@ blockquote {
 }
 
 .navbar {
-  box-shadow: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
-  opacity: 0.95;
+  opacity: 0.98;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
 }
 
 .navbar .dropdown-menu {
@@ -365,19 +416,25 @@ blockquote {
 
 .social {
   text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--global-divider-color);
 }
 .social .contact-icons {
   font-size: 4rem;
 }
 .social .contact-icons a i::before {
   color: var(--global-text-color);
-  transition-property: all 0.2s ease-in-out;
+  transition-property: all 0.3s ease-in-out;
 }
 .social .contact-icons a:hover i::before {
   color: var(--global-theme-color);
+  transform: scale(1.1);
 }
 .social .contact-note {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  color: var(--global-text-color-light);
 }
 
 footer.fixed-bottom {
@@ -576,7 +633,16 @@ footer.sticky-bottom {
   margin-top: 0;
 }
 .publications ol.bibliography li {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.publications ol.bibliography li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(13, 148, 136, 0.15);
 }
 .publications ol.bibliography li .preview {
   width: 100%;
@@ -634,10 +700,18 @@ footer.sticky-bottom {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   margin-left: 0;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 .publications ol.bibliography li .links a.btn:hover {
-  color: var(--global-theme-color);
+  color: var(--global-hover-text-color);
+  background-color: var(--global-theme-color);
   border-color: var(--global-theme-color);
+  text-decoration: none;
+  transform: translateY(-2px);
 }
 .publications ol.bibliography li .badges {
   padding-bottom: 0.5rem;
@@ -853,6 +927,158 @@ progress::-moz-progress-bar {
   color: var(--global-hover-text-color);
 }
 
+/* About page - Hero header */
+.about-hero {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.about-hero .post-header {
+  flex: 1 1 320px;
+  margin: 0;
+}
+.about-hero .post-header .post-title {
+  margin: 0 0 0.5rem;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  background: linear-gradient(135deg, var(--global-text-color) 30%, var(--global-theme-color) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.about-hero .post-header .desc {
+  font-size: 1.125rem;
+  color: var(--global-text-color-light);
+  margin-bottom: 0;
+}
+
+.profile-hero {
+  flex: 0 0 auto;
+  width: 200px;
+  margin: 0 !important;
+}
+.profile-hero img {
+  border-radius: 50%;
+  border: 3px solid var(--global-bg-color);
+  box-shadow: 0 0 0 3px var(--global-theme-color), 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.profile-hero .address {
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .about-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-hero .post-header .post-title {
+    font-size: 2.25rem;
+  }
+  .profile-hero {
+    width: 160px;
+  }
+}
+/* About page - Research Interests Section */
+.research-interests {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+.research-interests h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--global-text-color);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.research-interests .interest-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.research-interests .interest-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background-color: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  color: var(--global-text-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.3;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.research-interests .interest-tag:hover {
+  transform: translateY(-2px);
+  border-color: var(--global-theme-color);
+  color: var(--global-theme-color);
+}
+
+/* News section styling */
+.news {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.news table tr {
+  border-bottom: 1px solid var(--global-divider-color);
+}
+.news table tr:last-child {
+  border-bottom: none;
+}
+.news table tr th {
+  color: var(--global-theme-color);
+  font-weight: 600;
+  width: 150px;
+  padding: 1rem 0.5rem;
+  vertical-align: top;
+}
+.news table tr td {
+  padding: 1rem 0.5rem;
+}
+.news table tr td a {
+  font-weight: 500;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .research-interests {
+    margin-top: 2rem;
+  }
+  .research-interests h2 {
+    font-size: 1.2rem;
+  }
+  .research-interests .interest-tag {
+    font-size: 0.85rem;
+    padding: 0.45rem 0.85rem;
+  }
+  .publications ol.bibliography li {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .news table th {
+    width: 100px;
+    font-size: 0.85rem;
+    padding: 0.75rem 0.25rem;
+  }
+  .news table td {
+    padding: 0.75rem 0.25rem;
+    font-size: 0.9rem;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+}
 /* Table of Contents */
 nav[data-toggle=toc] {
   top: 5rem;
