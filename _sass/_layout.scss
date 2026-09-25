@@ -24,12 +24,21 @@ body.sticky-bottom-footer {
 
 .container {
   max-width: $max-content-width;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 // Profile
 .profile {
   img {
     width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 20px rgba(13, 148, 136, 0.2);
+    }
   }
 }
 
