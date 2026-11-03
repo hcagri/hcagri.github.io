@@ -1,3 +1,51 @@
+@inproceedings{heijmans2026robust,
+   abbr = {LoG},
+   title={Towards Adversarially Robust Multigraph Neural Networks for Financial Crime Analysis},
+   author={Heijmans, Dennis and Bilgi, H. {\c{C}}a{\u{g}}r{\i} and Wang, Rui and Atasu, Kubilay},
+   booktitle={Learning on Graphs Conference},
+   year={2026},
+   abstract={Financial transaction networks are naturally represented as multigraphs, where repeated transactions between the same pair of accounts are modeled as distinct edges. Recently proposed multigraph neural network architectures leverage this structure explicitly to achieve a strong performance on anti-money laundering (AML) tasks. However, their robustness to adversaries that manipulate transaction structures to evade detection remains largely unexplored. We present the first scalable framework for structural attacks and adversarial training of multigraph neural networks using node-edge incidence matrices, adapting projected gradient descent and projected randomized block coordinate descent methods to optimize structural perturbations over such matrices. We further introduce a cycle-based regularizer that penalizes changes in the global counts of directed 2- and 3-cycles, providing a structural measure of attack plausibility. Experiments on synthetic pattern-detection and realistic AML datasets show that our learned attacks substantially outperform non-learnable perturbation baselines in reducing detection performance (PR-AUC), while adversarial training consistently improves robustness against these attacks. These results demonstrate that multigraph neural networks are vulnerable to learned structural attacks and that adversarial training provides an effective defense.},
+   bibtex_show = {true},
+   preprint = {https://arxiv.org/abs/2610.31718},
+   code = {https://github.com/denheijmans/robust_multignn},
+   selected = {true}
+}
+
+@inproceedings{peltonen2026dial,
+   abbr = {LoG},
+   title={Random Probing for Structural Self-Interactions in Graph Neural Networks},
+   author={Peltonen, Saku and Bilgi, H. {\c{C}}a{\u{g}}r{\i} and Atasu, Kubilay},
+   booktitle={Learning on Graphs Conference},
+   year={2026},
+   abstract={Graph Neural Networks (GNNs) fundamentally lack the ability to capture structural properties defined by node self-interactions, such as cycle counts, subgraph centrality, and heat kernel signatures. Existing solutions often rely on computationally expensive higher-order architectures or hand-crafted features. In this work, we introduce DIAL, a message-passing layer that gives nodes access to graph structure through the diagonal of graph-derived operators. Our approach uses randomized probing to provide nodes with learnable, permutation equivariant access to diagonal entries. We prove that our approach can express important structural features, including cycle counts, subgraph centrality, and heat kernel signatures. The proposed method can be integrated directly into message passing layers. Experiments on molecular property prediction, cycle counting, and pattern detection demonstrate the effectiveness of DIAL across a range of graph learning tasks.},
+   bibtex_show = {true},
+   preprint = {https://arxiv.org/abs/2610.18164}
+}
+
+@inproceedings{savvidi2026tcee,
+   abbr = {ICIAF},
+   title={Leveraging Time-Series Foundation Models for Financial Crime Detection},
+   author={Savvidi, Danae Natalie and Bilgi, H. {\c{C}}a{\u{g}}r{\i} and Atasu, Kubilay and Deursen, Arie van},
+   booktitle={International Conference on AI in Finance},
+   year={2026},
+   abstract={Financial crime detection requires identifying illicit activity within large transaction networks, where suspicious behaviour is rare and unfolds over time. Existing graph-based methods capture relationships among accounts but typically underuse the temporal behaviour encoded in account transaction histories. We introduce Temporal-Context Edge Enrichment (TCEE), a framework that addresses this gap by summarising each account's transaction history with a frozen time-series foundation model (TSFM), and enriching each transaction's representation with the relevant temporal context from these summaries. These enriched representations can be scored directly for edge classification, or fed into a graph neural network (GNN) as edge features to capture broader structural information. Across six AMLWorld datasets, TCEE improves PR-AUC over the strongest evaluated baseline on five by a relative 10.8% on average, while training 6.0x faster end-to-end. Feeding TCEE's representations into a GNN raises PR-AUC a further 4.8% on the four smaller datasets. On an Ethereum phishing dataset, we show that TSFM-generated account representations fed into a GNN are also effective for node classification, improving PR-AUC by 14.5% over the strongest baseline. As TSFMs continue to advance, our results suggest they can strengthen financial crime detection by capturing temporal signals that complement graph-based approaches.},
+   bibtex_show = {true},
+   preprint = {https://arxiv.org/abs/2610.29667},
+   selected = {true}
+}
+
+@inproceedings{bilgi2026privacy,
+   abbr = {ICIAF},
+   title={Privacy-Preserving {GNN} Inference on Financial Transaction Graphs via Homomorphic Encryption},
+   author={Bilgi, H. {\c{C}}a{\u{g}}r{\i} and Mutluergil, Kemal and Y{\i}ld{\i}r{\i}m, Ceren and Atasu, Kubilay and Sava{\c{s}}, Erkay},
+   booktitle={Workshop on Financial AI Security, Privacy, and Safety, International Conference on AI in Finance},
+   year={2026},
+   abstract={Anti-money laundering (AML) in financial networks requires modeling transaction patterns that span multiple institutions. In practice, however, banks cannot share account and transaction features due to strict privacy regulations. We propose a privacy-preserving graph neural network (GNN) inference framework tailored to this multi-bank setting. A central server holds the graph connectivity and pretrained model weights in plaintext, while each bank keeps its transaction features encrypted. Inference is then carried out entirely on encrypted features under the CKKS homomorphic encryption scheme, so that no plaintext transaction features or predictions are exposed to the server. The key to making this practical is an edge-centric GNN architecture, wherein message passing is expressed through operations on node--edge incidence matrices. This formulation not only preserves the edge-attributed multigraph structure of transaction networks but also reduces every aggregation step to plaintext--ciphertext matrix products. Since CKKS can evaluate only polynomial circuits, we also approximate each nonlinearity with a composite polynomial of the sign function, which we calibrate per activation site. On the IBM AML benchmark, our model achieves performance competitive with plaintext baselines, and with a consumer-grade GPU, classifies each queried transaction end-to-end in as little as 5.31 seconds, while per-transaction latency can be amortized to 1.65 seconds when optimized for throughput.},
+   bibtex_show = {true},
+   preprint = {https://arxiv.org/abs/2610.18054},
+   selected = {true}
+}
+
 @article{bilgi2026mega,
    abbr = {TMLR},
    title={{MEGA}: Message Passing Neural Networks for Multigraphs with EdGe Attributes},
@@ -9,8 +57,7 @@
    bibtex_show = {true},
    pdf = {https://openreview.net/forum?id=Jo4KBvnMIP},
    selected = {true},
-   code = {https://github.com/hcagri/MEGA-GNN-TMLR},
-   preview = {megagnn.png}
+   code = {https://github.com/hcagri/MEGA-GNN-TMLR}
 }
 
 @inproceedings{2024_metu,
@@ -23,6 +70,5 @@
    abstract={The last decade has seen significant advancements in multi-object tracking, particularly with the emergence of deep learning based methods. However, many prior studies in online tracking have primarily focused on enhancing track management or extracting visual features, often leading to hybrid approaches with limited effectiveness, especially in scenarios with severe occlusions. Conversely, in offline tracking, there has been a lack of emphasis on robust motion cues. In response, this approach aims to present a novel solution for offline tracking by merging tracklets using some recent promising learning-based architectures. We leverage a jointly performing Transformer and Graph Neural Network (GNN) encoder to integrate both the individual motions of targets and their interactions in between. By enabling bi-directional information propagation between the Transformer and the GNN, proposed model allows motion modeling to depend on interactions, and conversely, interaction modeling to depend on the motion of each target. The proposed solution is an end-to-end trainable model that eliminates the requirement for any handcrafted short-term or long-term matching processes. This approach performs on par with state-of-the-art multi-object tracking algorithms, demonstrating its effectiveness and robustness.},
    bibtex_show={true},
    pdf={https://ieeexplore.ieee.org/document/10648019},
-   selected = {true},
    code = {https://github.com/hcagri/tr-gnn}
 }
