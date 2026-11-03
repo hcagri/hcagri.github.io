@@ -1,15 +1,11 @@
 "TMLR":
-  url: https://jmlr.org/tmlr/
   color: "#0f766e"
 
 "LoG":
-  url: https://logconference.org/
   color: "#7c3aed"
 
 "ICAIF":
-  url: https://ai-finance.org/
   color: "#b45309"
 
 "ICIP":
-  url: https://ieeexplore.ieee.org/xpl/conhome/1000349/all-proceedings
   color: "#1d4ed8"
