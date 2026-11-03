@@ -23,10 +23,10 @@
 }
 
 @inproceedings{savvidi2026tcee,
-   abbr = {ICIAF},
+   abbr = {ICAIF},
    title={Leveraging Time-Series Foundation Models for Financial Crime Detection},
    author={Savvidi, Danae Natalie and Bilgi, H. {\c{C}}a{\u{g}}r{\i} and Atasu, Kubilay and Deursen, Arie van},
-   booktitle={International Conference on AI in Finance},
+   booktitle={ACM International Conference on AI in Finance},
    year={2026},
    abstract={Financial crime detection requires identifying illicit activity within large transaction networks, where suspicious behaviour is rare and unfolds over time. Existing graph-based methods capture relationships among accounts but typically underuse the temporal behaviour encoded in account transaction histories. We introduce Temporal-Context Edge Enrichment (TCEE), a framework that addresses this gap by summarising each account's transaction history with a frozen time-series foundation model (TSFM), and enriching each transaction's representation with the relevant temporal context from these summaries. These enriched representations can be scored directly for edge classification, or fed into a graph neural network (GNN) as edge features to capture broader structural information. Across six AMLWorld datasets, TCEE improves PR-AUC over the strongest evaluated baseline on five by a relative 10.8% on average, while training 6.0x faster end-to-end. Feeding TCEE's representations into a GNN raises PR-AUC a further 4.8% on the four smaller datasets. On an Ethereum phishing dataset, we show that TSFM-generated account representations fed into a GNN are also effective for node classification, improving PR-AUC by 14.5% over the strongest baseline. As TSFMs continue to advance, our results suggest they can strengthen financial crime detection by capturing temporal signals that complement graph-based approaches.},
    bibtex_show = {true},
@@ -35,10 +35,10 @@
 }
 
 @inproceedings{bilgi2026privacy,
-   abbr = {ICIAF},
+   abbr = {ICAIF},
    title={Privacy-Preserving {GNN} Inference on Financial Transaction Graphs via Homomorphic Encryption},
    author={Bilgi, H. {\c{C}}a{\u{g}}r{\i} and Mutluergil, Kemal and Y{\i}ld{\i}r{\i}m, Ceren and Atasu, Kubilay and Sava{\c{s}}, Erkay},
-   booktitle={Workshop on Financial AI Security, Privacy, and Safety, International Conference on AI in Finance},
+   booktitle={Workshop on Financial AI Security, Privacy, and Safety, ACM International Conference on AI in Finance},
    year={2026},
    abstract={Anti-money laundering (AML) in financial networks requires modeling transaction patterns that span multiple institutions. In practice, however, banks cannot share account and transaction features due to strict privacy regulations. We propose a privacy-preserving graph neural network (GNN) inference framework tailored to this multi-bank setting. A central server holds the graph connectivity and pretrained model weights in plaintext, while each bank keeps its transaction features encrypted. Inference is then carried out entirely on encrypted features under the CKKS homomorphic encryption scheme, so that no plaintext transaction features or predictions are exposed to the server. The key to making this practical is an edge-centric GNN architecture, wherein message passing is expressed through operations on node--edge incidence matrices. This formulation not only preserves the edge-attributed multigraph structure of transaction networks but also reduces every aggregation step to plaintext--ciphertext matrix products. Since CKKS can evaluate only polynomial circuits, we also approximate each nonlinearity with a composite polynomial of the sign function, which we calibrate per activation site. On the IBM AML benchmark, our model achieves performance competitive with plaintext baselines, and with a consumer-grade GPU, classifies each queried transaction end-to-end in as little as 5.31 seconds, while per-transaction latency can be amortized to 1.65 seconds when optimized for throughput.},
    bibtex_show = {true},
