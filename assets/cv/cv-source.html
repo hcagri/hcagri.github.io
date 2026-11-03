@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Halil Çağrı Bilgi — Curriculum Vitae</title>
+<style>
+  @page {
+    size: A4;
+    margin: 13mm 15mm;
+  }
+
+  :root {
+    --ink: #1a1a1a;
+    --muted: #555;
+    --rule: #c8c8c8;
+    --accent: #0f766e;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.4;
+    color: var(--ink);
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+
+  header { margin-bottom: 13px; }
+
+  h1 {
+    margin: 0 0 4px;
+    font-size: 21pt;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+  }
+
+  .tagline {
+    margin: 0 0 6px;
+    font-size: 10.5pt;
+    color: var(--muted);
+  }
+
+  .contact { font-size: 9.5pt; color: var(--muted); }
+
+  .contact span::after {
+    content: "  ·  ";
+    color: var(--rule);
+  }
+
+  .contact span:last-child::after { content: ""; }
+
+  h2 {
+    margin: 15px 0 7px;
+    padding-bottom: 3px;
+    font-size: 10.8pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  h3 { margin: 0; font-size: 10.3pt; font-weight: 700; }
+
+  .entry { margin-bottom: 10px; page-break-inside: avoid; }
+
+  .entry:last-child { margin-bottom: 0; }
+
+  .entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .org {
+    margin: 1px 0 3px;
+    font-size: 9.8pt;
+    color: var(--muted);
+  }
+
+  .dates {
+    flex: 0 0 auto;
+    font-size: 9.4pt;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  ul { margin: 3px 0 0; padding-left: 16px; }
+
+  li { margin-bottom: 2.5px; }
+
+  p { margin: 0 0 6px; }
+
+  .skills div { margin-bottom: 3px; }
+
+  .pub { margin-bottom: 7px; page-break-inside: avoid; }
+
+  .page-break { break-before: page; }
+
+  .page-break > h2:first-child { margin-top: 0; }
+
+  .pub-title { font-weight: 700; }
+
+  .venue { font-style: italic; }
+
+  h4 {
+    margin: 9px 0 5px;
+    font-size: 9.8pt;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Halil Çağrı Bilgi</h1>
+  <p class="tagline">PhD Candidate in Graph Machine Learning — Delft University of Technology</p>
+  <div class="contact">
+    <span>Delft, Netherlands</span>
+    <span><a href="tel:+31623379556">+31 6 23 379556</a></span>
+    <span><a href="mailto:hcagri98@gmail.com">hcagri98@gmail.com</a></span>
+    <span><a href="https://hcagri.github.io">hcagri.github.io</a></span>
+    <span><a href="https://github.com/hcagri">github.com/hcagri</a></span>
+  </div>
+</header>
+
+<section>
+  <h2>Summary</h2>
+  <p>PhD candidate working on graph neural networks across expressivity, adversarial robustness, privacy-preserving inference, and explainability, applied to financial crime detection on edge-attributed multigraphs. Published at top-tier machine learning venues, with open-source implementations. Over four years of research and engineering experience across academia and industry.</p>
+</section>
+
+<section>
+  <h2>Education</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>PhD, Computer Science</h3>
+      <span class="dates">Jun 2024 – Present</span>
+    </div>
+    <div class="org">Delft University of Technology, Delft, Netherlands</div>
+    <ul>
+      <li>Data-Intensive Systems group. Daily supervisor: Dr. Kubilay Atasu. Promotor: Prof. Dr. Geert-Jan Houben.</li>
+      <li>Thesis topic: trustworthy graph neural networks for anti-money laundering on multigraph transaction networks.</li>
+      <li>Expected completion: 2028.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>MSc, Electrical and Electronics Engineering</h3>
+      <span class="dates">Sep 2021 – Apr 2024</span>
+    </div>
+    <div class="org">Middle East Technical University (METU), Ankara, Turkey</div>
+    <ul>
+      <li>Specialized in computer vision and signal processing.</li>
+      <li>Thesis on graph neural networks for multi-object tracking, supervised by Prof. Dr. Aydın Alatan.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>BSc, Electrical and Electronics Engineering</h3>
+      <span class="dates">Feb 2017 – Jul 2021</span>
+    </div>
+    <div class="org">Middle East Technical University (METU), Ankara, Turkey</div>
+    <ul>
+      <li>Senior-year specialization in signal processing and machine learning.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Research Experience</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Doctoral Researcher</h3>
+      <span class="dates">Jun 2024 – Present</span>
+    </div>
+    <div class="org">Delft University of Technology, Delft, Netherlands</div>
+    <p>Research on graph neural networks for financial crime detection, spanning expressivity of message passing on multigraphs, adversarial robustness, and privacy-preserving inference under homomorphic encryption. See publications below. Current work addresses explainability of GNN decisions for financial crime analysts, including the use of large language models.</p>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Research Assistant</h3>
+      <span class="dates">Nov 2022 – May 2024</span>
+    </div>
+    <div class="org">Middle East Technical University (METU), Ankara, Turkey</div>
+    <ul>
+      <li>Formulated multi-object tracking as link prediction on a graph to improve robustness under occlusion. Published at IEEE ICIP 2024.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Research Engineer</h3>
+      <span class="dates">Sep 2021 – Oct 2023</span>
+    </div>
+    <div class="org">METU Center for Image Analysis, Ankara, Turkey</div>
+    <ul>
+      <li>Developed a graph-based deep learning method to merge fragmented target trajectories in multi-object tracking, and applied optimal transport theory to tracklet merging.</li>
+      <li>Built an end-to-end pipeline for orbit determination, propagation, and refinement to estimate positions and orbits of space objects from imagery, for an international project funded by Telespazio.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="page-break">
+  <h2>Publications</h2>
+
+  <div class="pub">
+    <div class="pub-title">Towards Adversarially Robust Multigraph Neural Networks for Financial Crime Analysis</div>
+    <div>Dennis Heijmans, H. Çağrı Bilgi, Rui Wang, Kubilay Atasu. <span class="venue">Learning on Graphs Conference (LoG)</span>, 2026.</div>
+  </div>
+
+  <div class="pub">
+    <div class="pub-title">Random Probing for Structural Self-Interactions in Graph Neural Networks</div>
+    <div>Saku Peltonen, H. Çağrı Bilgi, Kubilay Atasu. <span class="venue">Learning on Graphs Conference (LoG)</span>, 2026.</div>
+  </div>
+
+  <div class="pub">
+    <div class="pub-title">Leveraging Time-Series Foundation Models for Financial Crime Detection</div>
+    <div>Danae Natalie Savvidi, H. Çağrı Bilgi, Kubilay Atasu, Arie van Deursen. <span class="venue">7th International Conference on AI in Finance (ICIAF)</span>, 2026.</div>
+  </div>
+
+  <div class="pub">
+    <div class="pub-title">Privacy-Preserving GNN Inference on Financial Transaction Graphs via Homomorphic Encryption</div>
+    <div>H. Çağrı Bilgi, Kemal Mutluergil, Ceren Yıldırım, Kubilay Atasu, Erkay Savaş. <span class="venue">Workshop on Financial AI Security, Privacy, and Safety, International Conference on AI in Finance (ICIAF)</span>, 2026.</div>
+  </div>
+
+  <div class="pub">
+    <div class="pub-title">MEGA: Message Passing Neural Networks for Multigraphs with Edge Attributes</div>
+    <div>H. Çağrı Bilgi, Kubilay Atasu. <span class="venue">Transactions on Machine Learning Research (TMLR)</span>, 2026.</div>
+  </div>
+
+  <div class="pub">
+    <div class="pub-title">Bi-Directional Tracklet Embedding for Multi-Object Tracking</div>
+    <div>H. Çağrı Bilgi, A. Aydın Alatan. <span class="venue">IEEE International Conference on Image Processing (ICIP)</span>, 2024.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><b>Expertise:</b> Graph neural networks, expressivity of message passing, adversarial robustness, privacy-preserving machine learning, explainability, computer vision</div>
+    <div><b>Machine learning:</b> LLM fine-tuning, distributed and multi-GPU training, large-scale graph processing</div>
+    <div><b>Tools:</b> Python, PyTorch, PyTorch Geometric, Weights &amp; Biases, HPC clusters (SLURM), Docker, Git, LaTeX</div>
+    <div><b>Languages:</b> English (fluent), Turkish (native)</div>
+  </div>
+</section>
+
+</body>
+</html>

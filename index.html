@@ -216,13 +216,152 @@
           
 
           <!-- Selected papers -->
-          <h2 style="margin-top: 3rem;"><a href="/publications/" style="color: inherit; text-decoration: none;">selected publications</a></h2>
+          <h2 style="margin-top: 3rem;"><a href="/publications/" style="color: inherit; text-decoration: none;">Selected Publications</a></h2>
           <div class="publications">
             <ol class="bibliography">
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" src="/assets/img/publication_preview/megagnn.png"></div>
+        <div class="col-sm-2 abbr"><abbr class="badge" style="background-color:#7c3aed"><a href="https://logconference.org/" rel="external nofollow noopener" target="_blank">LoG</a></abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="heijmans2026robust" class="col-sm-8">
+        
+          <!-- Title -->
+          <div class="title">Towards Adversarially Robust Multigraph Neural Networks for Financial Crime Analysis</div>
+          <!-- Author -->
+          <div class="author">
+          
+
+          Dennis Heijmans, H. Çağrı Bilgi, Rui Wang, and Kubilay Atasu</div>
+
+          <!-- Journal/Book title and date -->
+          <div class="periodical">
+            <em>In Learning on Graphs Conference</em> 2026
+          </div>
+        
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+          
+          <a href="https://arxiv.org/abs/2610.31718" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="external nofollow noopener">Preprint</a>
+          
+            <a href="https://github.com/denheijmans/robust_multignn" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Financial transaction networks are naturally represented as multigraphs, where repeated transactions between the same pair of accounts are modeled as distinct edges. Recently proposed multigraph neural network architectures leverage this structure explicitly to achieve a strong performance on anti-money laundering (AML) tasks. However, their robustness to adversaries that manipulate transaction structures to evade detection remains largely unexplored. We present the first scalable framework for structural attacks and adversarial training of multigraph neural networks using node-edge incidence matrices, adapting projected gradient descent and projected randomized block coordinate descent methods to optimize structural perturbations over such matrices. We further introduce a cycle-based regularizer that penalizes changes in the global counts of directed 2- and 3-cycles, providing a structural measure of attack plausibility. Experiments on synthetic pattern-detection and realistic AML datasets show that our learned attacks substantially outperform non-learnable perturbation baselines in reducing detection performance (PR-AUC), while adversarial training consistently improves robustness against these attacks. These results demonstrate that multigraph neural networks are vulnerable to learned structural attacks and that adversarial training provides an effective defense.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">heijmans2026robust</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Towards Adversarially Robust Multigraph Neural Networks for Financial Crime Analysis}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Heijmans, Dennis and Bilgi, H. {\c{C}}a{\u{g}}r{\i} and Wang, Rui and Atasu, Kubilay}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Learning on Graphs Conference}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr"><abbr class="badge" style="background-color:#b45309"><a href="https://ai-finance.org/" rel="external nofollow noopener" target="_blank">ICIAF</a></abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="savvidi2026tcee" class="col-sm-8">
+        
+          <!-- Title -->
+          <div class="title">Leveraging Time-Series Foundation Models for Financial Crime Detection</div>
+          <!-- Author -->
+          <div class="author">
+          
+
+          Danae Natalie Savvidi, H. Çağrı Bilgi, Kubilay Atasu, and Arie van Deursen</div>
+
+          <!-- Journal/Book title and date -->
+          <div class="periodical">
+            <em>In International Conference on AI in Finance</em> 2026
+          </div>
+        
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+          
+          <a href="https://arxiv.org/abs/2610.29667" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="external nofollow noopener">Preprint</a>
+          
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Financial crime detection requires identifying illicit activity within large transaction networks, where suspicious behaviour is rare and unfolds over time. Existing graph-based methods capture relationships among accounts but typically underuse the temporal behaviour encoded in account transaction histories. We introduce Temporal-Context Edge Enrichment (TCEE), a framework that addresses this gap by summarising each account’s transaction history with a frozen time-series foundation model (TSFM), and enriching each transaction’s representation with the relevant temporal context from these summaries. These enriched representations can be scored directly for edge classification, or fed into a graph neural network (GNN) as edge features to capture broader structural information. Across six AMLWorld datasets, TCEE improves PR-AUC over the strongest evaluated baseline on five by a relative 10.8% on average, while training 6.0x faster end-to-end. Feeding TCEE’s representations into a GNN raises PR-AUC a further 4.8% on the four smaller datasets. On an Ethereum phishing dataset, we show that TSFM-generated account representations fed into a GNN are also effective for node classification, improving PR-AUC by 14.5% over the strongest baseline. As TSFMs continue to advance, our results suggest they can strengthen financial crime detection by capturing temporal signals that complement graph-based approaches.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">savvidi2026tcee</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Leveraging Time-Series Foundation Models for Financial Crime Detection}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Savvidi, Danae Natalie and Bilgi, H. {\c{C}}a{\u{g}}r{\i} and Atasu, Kubilay and Deursen, Arie van}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{International Conference on AI in Finance}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr"><abbr class="badge" style="background-color:#b45309"><a href="https://ai-finance.org/" rel="external nofollow noopener" target="_blank">ICIAF</a></abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="bilgi2026privacy" class="col-sm-8">
+        
+          <!-- Title -->
+          <div class="title">Privacy-Preserving GNN Inference on Financial Transaction Graphs via Homomorphic Encryption</div>
+          <!-- Author -->
+          <div class="author">
+          
+
+          H. Çağrı Bilgi, Kemal Mutluergil, Ceren Yıldırım, Kubilay Atasu, and Erkay Savaş</div>
+
+          <!-- Journal/Book title and date -->
+          <div class="periodical">
+            <em>In Workshop on Financial AI Security, Privacy, and Safety, International Conference on AI in Finance</em> 2026
+          </div>
+        
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+          
+          <a href="https://arxiv.org/abs/2610.18054" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="external nofollow noopener">Preprint</a>
+          
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Anti-money laundering (AML) in financial networks requires modeling transaction patterns that span multiple institutions. In practice, however, banks cannot share account and transaction features due to strict privacy regulations. We propose a privacy-preserving graph neural network (GNN) inference framework tailored to this multi-bank setting. A central server holds the graph connectivity and pretrained model weights in plaintext, while each bank keeps its transaction features encrypted. Inference is then carried out entirely on encrypted features under the CKKS homomorphic encryption scheme, so that no plaintext transaction features or predictions are exposed to the server. The key to making this practical is an edge-centric GNN architecture, wherein message passing is expressed through operations on node–edge incidence matrices. This formulation not only preserves the edge-attributed multigraph structure of transaction networks but also reduces every aggregation step to plaintext–ciphertext matrix products. Since CKKS can evaluate only polynomial circuits, we also approximate each nonlinearity with a composite polynomial of the sign function, which we calibrate per activation site. On the IBM AML benchmark, our model achieves performance competitive with plaintext baselines, and with a consumer-grade GPU, classifies each queried transaction end-to-end in as little as 5.31 seconds, while per-transaction latency can be amortized to 1.65 seconds when optimized for throughput.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">bilgi2026privacy</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Privacy-Preserving {GNN} Inference on Financial Transaction Graphs via Homomorphic Encryption}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Bilgi, H. {\c{C}}a{\u{g}}r{\i} and Mutluergil, Kemal and Y{\i}ld{\i}r{\i}m, Ceren and Atasu, Kubilay and Sava{\c{s}}, Erkay}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Workshop on Financial AI Security, Privacy, and Safety, International Conference on AI in Finance}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr"><abbr class="badge" style="background-color:#0f766e"><a href="https://jmlr.org/tmlr/" rel="external nofollow noopener" target="_blank">TMLR</a></abbr></div>
 
         <!-- Entry bib key -->
         <div id="bilgi2026mega" class="col-sm-8">
@@ -266,53 +405,6 @@
         </div>
       </div>
 </li>
-<li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 abbr"><abbr class="badge">ICIP</abbr></div>
-
-        <!-- Entry bib key -->
-        <div id="2024_metu" class="col-sm-8">
-        
-          <!-- Title -->
-          <div class="title">Bi-Directional Tracklet Embedding for Multi-Object Tracking</div>
-          <!-- Author -->
-          <div class="author">
-          
-
-          H. Çağrı Bilgi, and A. Aydın Alatan</div>
-
-          <!-- Journal/Book title and date -->
-          <div class="periodical">
-            <em>In International Conference on Image Processing</em> 2024
-          </div>
-        
-          <!-- Links/Buttons -->
-          <div class="links">
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
-          
-            <a href="https://ieeexplore.ieee.org/document/10648019" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
-            <a href="https://github.com/hcagri/tr-gnn" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
-          </div>
-
-          <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>The last decade has seen significant advancements in multi-object tracking, particularly with the emergence of deep learning based methods. However, many prior studies in online tracking have primarily focused on enhancing track management or extracting visual features, often leading to hybrid approaches with limited effectiveness, especially in scenarios with severe occlusions. Conversely, in offline tracking, there has been a lack of emphasis on robust motion cues. In response, this approach aims to present a novel solution for offline tracking by merging tracklets using some recent promising learning-based architectures. We leverage a jointly performing Transformer and Graph Neural Network (GNN) encoder to integrate both the individual motions of targets and their interactions in between. By enabling bi-directional information propagation between the Transformer and the GNN, proposed model allows motion modeling to depend on interactions, and conversely, interaction modeling to depend on the motion of each target. The proposed solution is an end-to-end trainable model that eliminates the requirement for any handcrafted short-term or long-term matching processes. This approach performs on par with state-of-the-art multi-object tracking algorithms, demonstrating its effectiveness and robustness.</p>
-          </div>
-<!-- Hidden bibtex block -->
-          <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">2024_metu</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Bilgi, H. {\c{C}}a{\u{g}}r{\i} and Alatan, A. Ayd{\i}n}</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Bi-Directional Tracklet Embedding for Multi-Object Tracking}</span><span class="p">,</span>
-  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{International Conference on Image Processing}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1109/ICIP51287.2024.10648019}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-          </div>
-        </div>
-      </div>
-</li>
 </ol>
           </div>
 
@@ -344,7 +436,7 @@
     <!-- Footer --><footer class="sticky-bottom mt-5">
   <div class="container" style="font-size: 12px">
     © Copyright 2026 Halil Çağrı  Bilgi. © 2025 Halil Çağrı Bilgi. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
-Last updated: September 25, 2026.
+Last updated: November 03, 2026.
   </div>
 </footer>
 
